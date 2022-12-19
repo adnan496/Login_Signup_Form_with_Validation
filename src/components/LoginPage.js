@@ -19,6 +19,7 @@ function LoginPage() {
   const [isSubmit, setIsSubmit] = useState(false);
 
   const handleChange = (e) => {
+     
       const {name, value} = e.target;
       setFormValues({...formValues, [name]:value})
       
@@ -63,7 +64,7 @@ function LoginPage() {
       <form onSubmit={handleSubmit} className="mt-6">
         <div className="mb-2">
           <label
-            for="email"
+           htmlFor="email"
             className="block text-sm font-semibold text-gray-800"
           >
             Email
@@ -80,7 +81,7 @@ function LoginPage() {
         <p className="text-red-500">{formErrors.email}</p>
         <div className="mb-2">
           <label
-            for="password"
+            htmlFor="password"
             className="block text-sm font-semibold text-gray-800"
           >
             Password
